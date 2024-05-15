@@ -14,11 +14,18 @@ let products = [
         price : 20,
     },
     {
-        id : 4,
+        id : 3,
         img : "https://cdn.defenseone.com/media/img/cd/2021/01/26/Screen_Shot_2021-01-26_at_3.19.32_PM/860x394.png",
         title : "battery samsung",
         category : "mobile nokia",
         price : 20,
+    },
+    {
+        id : 10,
+        img : "https://cdn.defenseone.com/media/img/cd/2021/01/26/Screen_Shot_2021-01-26_at_3.19.32_PM/860x394.png",
+        title : "Testing Product",
+        category : "No category",
+        price : 60,
     }
 ]
 let divId = document.getElementById('checkD');
@@ -40,15 +47,18 @@ function addToCart(id) {
         cartData.push(id);
         cartPanel.innerHTML = "";
         priceData = 0;
-        cartData.forEach((item)=>{
-            cartPanel.innerHTML += ` <div class="product">
-            <img src="${products[item].img}" alt="" height="100px" width="100px">
-            <h2 class="product-name">${products[item].title}</h2>
-            <p class="product-category"${products[item].category}</p>
-            <p class="product-price">${products[item].price}</p>
-        </div>`
-        priceData += products[item].price
-            priceHtml.innerHTML = priceData;
-        })
+        cartData.forEach((itemId) => {
+            const item = products.find(product => product.id === itemId);
+            if (item) {
+                cartPanel.innerHTML += `<div class="product">
+                <img src="${item.img}" alt="" height="100px" width="100px">
+                <h2 class="product-name">${item.title}</h2>
+                <p class="product-category">${item.category}</p>
+                <p class="product-price">${item.price}</p>
+            </div>`;
+                priceData += item.price;
+            }
+        });
+        priceHtml.innerHTML = priceData;
     }
 }
