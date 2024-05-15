@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Page</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="product-row">
+    <div class="product">
+<img src="https://www.jbl.com/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw464e7efe/01.JBL_Tune%20Buds_Product%20Image_Hero_Black.png?sw=535&sh=535" alt="" height="100px" width="100px">
+        <h2 class="product-name">Quantum Wireless Earbuds</h2>
+        <p class="product-category">Audio Accessories</p>
+        <p class="product-price">$99.99</p>
+        <button class="buy-button">Buy Now</button>
+        <button class="add-to-cart-button" onclick="addToCart('Quantum Wireless Earbuds', 99.99)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="https://www.fireboltt.com/cdn/shop/products/infinity-silver_3_1800x1800.png?v=1673173983" alt="" height="100px" width="100px">
+        <h2 class="product-name">Infinity Smartwatch</h2>
+        <p class="product-category">Wearable Technology</p>
+        <p class="product-price">$199.99</p>
+        <button class="buy-button">Buy Now</button>
+        <button class="add-to-cart-button" onclick="addToCart('Infinity Smartwatch', 199.99)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="https://i.pinimg.com/564x/20/2a/4d/202a4d8a353c04603a5feeac5923a341.jpg" alt="" height="100px" width="100px">
+        <h2 class="product-name">Lumina Portable Charger</h2>
+        <p class="product-category">Mobile Accessories</p>
+        <p class="product-price">$49.99</p>
+        <button class="buy-button">Buy Now</button>
+        <button class="add-to-cart-button" onclick="addToCart('Lumina Portable Charger', 49.99)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="https://cdn.defenseone.com/media/img/cd/2021/01/26/Screen_Shot_2021-01-26_at_3.19.32_PM/860x394.png" alt="" height="100px" width="100px">
+        <h2 class="product-name">Nova Compact Drone</h2>
+        <p class="product-category">Photography and Videography</p>
+        <p class="product-price">$149.99</p>
+        <button class="buy-button">Buy Now</button>
+        <button class="add-to-cart-button" onclick="addToCart('Nova Compact Drone', 149.99)">Add to Cart</button>
+    </div>
+</div>
+
+<div id="cart-panel" class="cart-panel">
+    <!-- <span class="close-btn" onclick="closeCartPanel()">&times;</span> -->
+    <h2>Shopping Cart</h2>
+    <ul id="cart-items">
+        
+    </ul>
+    <p>Total: $<span id="total-price">0.00</span></p>
+</div>
+<!-- additional div -->
+<div id="checkD"></div>
+<script src="./script.js"></script>
+</body>
+</html>
